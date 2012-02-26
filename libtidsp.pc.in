@@ -1,0 +1,9 @@
+prefix=@prefix@
+libdir=@libdir@
+includedir=${prefix}/include
+
+Name: libtidsp
+Description: TI DSP library
+Version: @version@
+Libs: -L${libdir} -ltidsp
+Cflags: -I${includedir}
