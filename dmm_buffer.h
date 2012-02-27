@@ -29,20 +29,6 @@ enum dma_data_direction {
 	DMA_FROM_DEVICE,
 };
 
-struct dmm_buffer {
-	int handle;
-	void *proc;
-	void *data;
-	void *allocated_data;
-	size_t size;
-	size_t len;
-	void *reserve;
-	void *map;
-	bool need_copy;
-	int dir;
-	size_t dma_len;
-};
-
 typedef struct dmm_buffer dmm_buffer_t;
 
 static inline dmm_buffer_t *dmm_buffer_new(int handle, void *proc, int dir)

@@ -24,6 +24,20 @@ struct dmm_buffer;
 struct dsp_node;
 struct dsp_notification;
 
+struct dmm_buffer {
+	int handle;
+	void *proc;
+	void *data;
+	void *allocated_data;
+	size_t size;
+	size_t len;
+	void *reserve;
+	void *map;
+	bool need_copy;
+	int dir;
+	size_t dma_len;
+};
+
 struct td_buffer {
 	struct td_port *port;
 	struct dmm_buffer *data;
